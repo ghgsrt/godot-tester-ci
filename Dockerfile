@@ -1,6 +1,6 @@
 FROM croconut/linux-downloader
 
-RUN apt-get update && apt-get install -y --no-install-recommends \
+RUN apt-get update && apt-get install -y \
   libxcursor-dev \
   libxinerama-dev \
   libxrandr-dev \
