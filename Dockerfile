@@ -1,10 +1,6 @@
 FROM croconut/linux-downloader
 
-RUN sudo apt install libxcursor-dev
-RUN sudo apt install libxinerama-dev
-RUN sudo apt install libxrandr-dev
-RUN sudo apt install libxi6
-RUN sudo apt install libgl1
+/bin/sh -c apt-get update && apt-get install -y --no-install-recommends libxcursor-dev libxinerama-dev libxrandr-dev libxi6 libgl1
 
 COPY entrypoint.sh /entrypoint.sh
 COPY __rebuilder.gd /__rebuilder.gd
