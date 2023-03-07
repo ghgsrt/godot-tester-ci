@@ -4,7 +4,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
   libxcursor-dev \
   libxinerama-dev \
   libxrandr-dev \
-  libxkbcommon \
+  libxkbcommon-dev \
   libxi6 \
   libgl1 \
   libfontconfig
