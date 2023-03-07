@@ -150,7 +150,7 @@ if [ "$IS_MONO" = "true" ]; then
     timeout ${IMPORT_TIME} ./${CUSTOM_DL_PATH}/${FULL_GODOT_NAME}${GODOT_EXTENSION}/${FULL_GODOT_NAME}${GODOT_DOT_EXT} --headless --editor addons/gut/.cli_add/__rebuilder_scene.tscn
     timeout ${TEST_TIME} ./${CUSTOM_DL_PATH}/${FULL_GODOT_NAME}${GODOT_EXTENSION}/${FULL_GODOT_NAME}${GODOT_DOT_EXT} ${RUN_OPTIONS} 2>&1 | cap
 else
-    timeout ${IMPORT_TIME} ./${CUSTOM_DL_PATH}/${FULL_GODOT_NAME}${GODOT_EXTENSION} --rendering-driver opengl3 --editor addons/gut/.cli_add/__rebuilder_scene.tscn
+    timeout ${IMPORT_TIME} ./${CUSTOM_DL_PATH}/${FULL_GODOT_NAME}${GODOT_EXTENSION} --headless --editor addons/gut/.cli_add/__rebuilder_scene.tscn
     timeout ${TEST_TIME} ./${CUSTOM_DL_PATH}/${FULL_GODOT_NAME}${GODOT_EXTENSION} --headless ${RUN_OPTIONS} 2>&1 | cap
 fi
 
