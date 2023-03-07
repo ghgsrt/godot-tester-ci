@@ -20,7 +20,7 @@ CONFIG_FILE=${13}
 CUSTOM_GODOT_DL_URL=${14}
 RESULT_OUTPUT_FILE=${15}
 
-GODOT_SERVER_TYPE="headless"
+GODOT_SERVER_TYPE=""
 TESTS=0
 FAILED=0
 CUSTOM_DL_PATH="~/custom_dl_folder"
@@ -95,7 +95,7 @@ fi
 if [ "$IS_MONO" = "true" ]; then
     GODOT_RELEASE_TYPE="${RELEASE_TYPE}_mono"
     DL_PATH_EXTENSION="${GODOT_VERSION}${DL_PATH_SUFFIX}/mono/"
-    GODOT_EXTENSION="_64"
+    GODOT_EXTENSION="_x86_64"
     # this is a folder for mono versions
     FULL_GODOT_NAME=Godot_v${GODOT_VERSION}-${GODOT_RELEASE_TYPE}_linux_${GODOT_SERVER_TYPE}
 else
