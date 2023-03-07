@@ -5,7 +5,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
   libxinerama-dev \
   libxrandr-dev \
   libxi6 \
-  libgl1
+  libgl1 \
+  libfontconfig
 
 COPY entrypoint.sh /entrypoint.sh
 COPY __rebuilder.gd /__rebuilder.gd
