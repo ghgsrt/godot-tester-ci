@@ -101,8 +101,8 @@ if [ "$IS_MONO" = "true" ]; then
 else
     GODOT_RELEASE_TYPE="${RELEASE_TYPE}"
     DL_PATH_EXTENSION="${GODOT_VERSION}${DL_PATH_SUFFIX}/"
-    GODOT_EXTENSION=".64"
-    FULL_GODOT_NAME=Godot_v${GODOT_VERSION}-${GODOT_RELEASE_TYPE}_linux_${GODOT_SERVER_TYPE}
+    GODOT_EXTENSION=".x86_64"
+    FULL_GODOT_NAME=Godot_v${GODOT_VERSION}_stable_linux
 fi
 
 # these are mutually exclusive - direct scenes cannot take a config file but they can
@@ -150,7 +150,7 @@ if [ "$IS_MONO" = "true" ]; then
     timeout ${IMPORT_TIME} ./${CUSTOM_DL_PATH}/${FULL_GODOT_NAME}${GODOT_EXTENSION}/${FULL_GODOT_NAME}${GODOT_DOT_EXT} --headless --editor addons/gut/.cli_add/__rebuilder_scene.tscn
     timeout ${TEST_TIME} ./${CUSTOM_DL_PATH}/${FULL_GODOT_NAME}${GODOT_EXTENSION}/${FULL_GODOT_NAME}${GODOT_DOT_EXT} ${RUN_OPTIONS} 2>&1 | cap
 else
-    timeout ${IMPORT_TIME} ./${CUSTOM_DL_PATH}/${FULL_GODOT_NAME}${GODOT_EXTENSION} --editor addons/gut/.cli_add/__rebuilder_scene.tscn
+    timeout ${IMPORT_TIME} ./${CUSTOM_DL_PATH}/${FULL_GODOT_NAME}${GODOT_EXTENSION} --headless --editor addons/gut/.cli_add/__rebuilder_scene.tscn
     timeout ${TEST_TIME} ./${CUSTOM_DL_PATH}/${FULL_GODOT_NAME}${GODOT_EXTENSION} ${RUN_OPTIONS} 2>&1 | cap
 fi
 
