@@ -102,7 +102,7 @@ else
     GODOT_RELEASE_TYPE="${RELEASE_TYPE}"
     DL_PATH_EXTENSION="${GODOT_VERSION}${DL_PATH_SUFFIX}/"
     GODOT_EXTENSION=".x86_64"
-    FULL_GODOT_NAME=Godot_v${GODOT_VERSION}_stable_linux
+    FULL_GODOT_NAME=Godot_v${GODOT_VERSION}-stable_linux
 fi
 
 # these are mutually exclusive - direct scenes cannot take a config file but they can
