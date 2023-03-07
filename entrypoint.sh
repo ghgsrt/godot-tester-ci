@@ -25,8 +25,7 @@ TESTS=0
 FAILED=0
 CUSTOM_DL_PATH="~/custom_dl_folder"
 
-RUN_OPTIONS="-s addons/gut/gut_cmdln.gd"
-RUN_OPTIONS="${RUN_OPTIONS} --headless"
+RUN_OPTIONS="--headless -s addons/gut/gut_cmdln.gd"
 RUN_OPTIONS="${RUN_OPTIONS} -gdir=${TEST_DIR}"
 RUN_OPTIONS="${RUN_OPTIONS} -ginclude_subdirs"
 RUN_OPTIONS="${RUN_OPTIONS} -gjunit_xml_file=./${RESULT_OUTPUT_FILE}"
