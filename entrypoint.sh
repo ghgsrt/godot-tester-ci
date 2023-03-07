@@ -146,8 +146,9 @@ if [ "$IS_MONO" = "true" ]; then
     # need to init the imports
     # workaround for -e -q and -e with timeout failing
     # credit: https://github.com/Kersoph/open-sequential-logic-simulation/pull/4/files
-    timeout ${IMPORT_TIME} ./${CUSTOM_DL_PATH}/${FULL_GODOT_NAME}${GODOT_EXTENSION}/${FULL_GODOT_NAME}${GODOT_EXTENSION} --editor addons/gut/.cli_add/__rebuilder_scene.tscn
-    timeout ${TEST_TIME} ./${CUSTOM_DL_PATH}/${FULL_GODOT_NAME}${GODOT_EXTENSION}/${FULL_GODOT_NAME}${GODOT_EXTENSION} ${RUN_OPTIONS} 2>&1 | cap
+    GODOT_DOT_EXT=".x86_64"
+    timeout ${IMPORT_TIME} ./${CUSTOM_DL_PATH}/${FULL_GODOT_NAME}${GODOT_EXTENSION}/${FULL_GODOT_NAME}${GODOT_DOT_EXT} --editor addons/gut/.cli_add/__rebuilder_scene.tscn
+    timeout ${TEST_TIME} ./${CUSTOM_DL_PATH}/${FULL_GODOT_NAME}${GODOT_EXTENSION}/${FULL_GODOT_NAME}${GODOT_DOT_EXT} ${RUN_OPTIONS} 2>&1 | cap
 else
     timeout ${IMPORT_TIME} ./${CUSTOM_DL_PATH}/${FULL_GODOT_NAME}${GODOT_EXTENSION} --editor addons/gut/.cli_add/__rebuilder_scene.tscn
     timeout ${TEST_TIME} ./${CUSTOM_DL_PATH}/${FULL_GODOT_NAME}${GODOT_EXTENSION} ${RUN_OPTIONS} 2>&1 | cap
