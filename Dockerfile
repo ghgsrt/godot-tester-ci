@@ -4,10 +4,10 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
   libxcursor-dev \
   libxinerama-dev \
   libxrandr-dev \
+  libxkbcommon \
   libxi6 \
   libgl1 \
-  libfontconfig \
-  libxkbcommon
+  libfontconfig
 
 COPY entrypoint.sh /entrypoint.sh
 COPY __rebuilder.gd /__rebuilder.gd
