@@ -5,7 +5,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
   libxinerama-dev \
   libxrandr-dev \
   libxi6 \
-  libgl1
+  libgl1 \
+  snap
 
 RUN snap install dotnet-sdk --classic --channel=7.0
 
