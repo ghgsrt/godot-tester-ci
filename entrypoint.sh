@@ -25,7 +25,7 @@ TESTS=0
 FAILED=0
 CUSTOM_DL_PATH="~/custom_dl_folder"
 
-RUN_OPTIONS="--headless -s addons/gut/gut_cmdln.gd"
+RUN_OPTIONS="-s addons/gut/gut_cmdln.gd"
 RUN_OPTIONS="${RUN_OPTIONS} -gdir=${TEST_DIR}"
 RUN_OPTIONS="${RUN_OPTIONS} -ginclude_subdirs"
 RUN_OPTIONS="${RUN_OPTIONS} -gjunit_xml_file=./${RESULT_OUTPUT_FILE}"
@@ -147,7 +147,7 @@ if [ "$IS_MONO" = "true" ]; then
     # workaround for -e -q and -e with timeout failing
     # credit: https://github.com/Kersoph/open-sequential-logic-simulation/pull/4/files
     GODOT_DOT_EXT=".x86_64"
-    timeout ${IMPORT_TIME} ./${CUSTOM_DL_PATH}/${FULL_GODOT_NAME}${GODOT_EXTENSION}/${FULL_GODOT_NAME}${GODOT_DOT_EXT} --headless --editor addons/gut/.cli_add/__rebuilder_scene.tscn
+    timeout ${IMPORT_TIME} ./${CUSTOM_DL_PATH}/${FULL_GODOT_NAME}${GODOT_EXTENSION}/${FULL_GODOT_NAME}${GODOT_DOT_EXT} --editor addons/gut/.cli_add/__rebuilder_scene.tscn
     timeout ${TEST_TIME} ./${CUSTOM_DL_PATH}/${FULL_GODOT_NAME}${GODOT_EXTENSION}/${FULL_GODOT_NAME}${GODOT_DOT_EXT} ${RUN_OPTIONS} 2>&1 | cap
 else
     timeout ${IMPORT_TIME} ./${CUSTOM_DL_PATH}/${FULL_GODOT_NAME}${GODOT_EXTENSION} --editor addons/gut/.cli_add/__rebuilder_scene.tscn
